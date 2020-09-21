@@ -22,7 +22,7 @@ export default function App() {
     return (
       <View style={styles.container}>
         <Routes />
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
       </View>
     );
   }
