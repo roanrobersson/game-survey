@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Filters from '../../components/filters';
+import Filters from 'core/components/filters';
 import './styles.css';
 import { barOptions, pieOptions } from './chart-options';
 import Chart from 'react-apexcharts';
-import axios from 'axios';
 import { buildBarSeries, getPlatformChartData, getGenderChartData } from './helpers';
+import { makeRequest } from 'core/utils/request';
 
 type PieChartData = {
   labels: string[];
@@ -21,7 +21,6 @@ const initialPieData = {
   series: []
 }
 
-const BASE_URL = 'https://sds1-roan.herokuapp.com'
 
 const Charts = () => {
   const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
@@ -30,8 +29,8 @@ const Charts = () => {
 
   useEffect(() => {
     async function getData() {
-      const recordsResponse = await axios.get(`${BASE_URL}/records`);
-      const gamesResponse = await axios.get(`${BASE_URL}/games`);
+      const recordsResponse = await makeRequest({ url: '/records' });
+      const gamesResponse = await makeRequest({ url: '/games' });
    
       const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content);
       setBarChartData(barData);

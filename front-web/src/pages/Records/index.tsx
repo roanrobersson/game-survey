@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import './styles.css';
 import { RecordsResponse } from './types';
 import { formatDate } from './helpers';
 import Pagination from './Pagination';
-import Filters from '../../components/filters';
-
-const BASE_URL = 'https://sds1-roan.herokuapp.com'
+import Filters from 'core/components/filters';
+import { makeRequest } from 'core/utils/request';
 
 const Records = () => {
   const [recordsResponse, setRecordsResponse] = useState<RecordsResponse>();
   const [activePage, setActivePage] = useState(0);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/records?linesPerPage=12&page=${activePage}`)
+    makeRequest({ url: `/records?linesPerPage=12&page=${activePage}` })
       .then(response => setRecordsResponse(response.data));
   }, [activePage]);
 
