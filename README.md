@@ -1,11 +1,11 @@
-# Big Game Survey 
+# Game Survey 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/roanrobersson/dspesquisa/blob/master/LICENSE) 
 
 # Sobre o projeto
 
-https://sds1-roan.netlify.app
+https://game-survey-roan.netlify.app
 
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
 A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
 
@@ -23,19 +23,19 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 # Tecnologias utilizadas
 ## Back end
 - Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
+- [Spring Boot](https://spring.io/projects/spring-boot "Documentação do Spring Boot")
+- [JPA / Hibernate](https://spring.io/projects/spring-data-jpa "Documentação do Spring Data JPA")
+- [Maven](https://maven.apache.org "Site do Maven")
 ## Front end
 - HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
+- [ReactJS](https://reactjs.com "Site do ReactJS")
+- [React Native](https://reactnative.dev "Site do React Native")
+- [Apex Charts](https://apexcharts.com "Site do Apex Charts")
+- [Expo](https://expo.io "Site do Expo")
 ## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+- Back end: [Heroku](https://www.heroku.com "Site do Heroku")
+- Front end web: [Netlify](https://www.netlify.com "Site do Netlify")
+- Banco de dados: [Postgresql](https://www.postgresql.org "Site do Postgresql")
 
 # Como executar o projeto
 
@@ -44,7 +44,7 @@ Pré-requisitos: Java 11
 
 ```bash
 # clonar repositório
-git clone https://github.com/roanrobersson/dspesquisa
+git clone https://github.com/roanrobersson/game-survey
 
 # entrar na pasta do projeto back end
 cd backend
@@ -58,15 +58,15 @@ Pré-requisitos: npm / yarn
 
 ```bash
 # clonar repositório
-git clone https://github.com/roanrobersson/dspesquisa
+git clone https://github.com/roanrobersson/game-survey
 
 # entrar na pasta do projeto front end web
 cd front-web
 
 # instalar dependências
-yarn install
+npm install
 
 # executar o projeto
-yarn start
+npm start
 ```
 
