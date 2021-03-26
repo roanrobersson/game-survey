@@ -10,15 +10,15 @@ Game Survey é uma aplicação full stack web e mobile construída durante a 1ª
 A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
 
 ## Layout mobile
-![Mobile 1](https://raw.githubusercontent.com/roanrobersson/assets/master/dspesquisa/mobile1.png) ![Mobile 2](https://raw.githubusercontent.com/roanrobersson/assets/master/dspesquisa/mobile2.png)
+![Mobile 1](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/mobile1.png) ![Mobile 2](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/mobile2.png)
 
 ## Layout web
-![Web 1](https://raw.githubusercontent.com/roanrobersson/assets/master/dspesquisa/web1.png)
+![Web 1](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/web1.png)
 
-![Web 2](https://raw.githubusercontent.com/roanrobersson/assets/master/dspesquisa/web2.png)
+![Web 2](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/web2.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://raw.githubusercontent.com/roanrobersson/assets/master/dspesquisa/modelo-conceitual.png)
+![Modelo Conceitual](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/modelo-conceitual.png)
 
 # Tecnologias utilizadas
 ## Back end
