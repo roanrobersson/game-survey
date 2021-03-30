@@ -70,3 +70,28 @@ npm install
 npm start
 ```
 
+## Front mobile
+Pré-requisitos: npm / yarn
+
+```bash
+# clonar repositório
+git clone https://github.com/roanrobersson/game-survey
+
+# entrar na pasta do projeto front end mobile
+cd front-mobile
+
+# instalar dependências
+npm install
+
+# executar o servidor
+(Android) npm start --android 
+(iOS) npm start --ios
+
+# instalar o app Expo Go no dispositivo mobile
+(Android) https://play.google.com/store/apps/details?id=host.exp.exponent
+(iOS) https://apps.apple.com/br/app/expo-go/id982107779
+
+# acessar o projeto no dispositivo mobile
+escanear o código QR exibido no navegador usando o Expo Go
+
+```
