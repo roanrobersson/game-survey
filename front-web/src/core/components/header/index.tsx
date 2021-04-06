@@ -7,9 +7,9 @@ const Header = () => (
   <header className="main-header">
     <Logo />
     <Link to="/">
-      <div className="logo-text">
-        <span className="logo-text-1">Game</span>
-        <span className="logo-text-2"> Survey</span>
+      <div className="logo__text">
+        <span className="logo__text-1">Game</span>
+        <span className="logo__text-2"> Survey</span>
       </div>
     </Link>
   </header>

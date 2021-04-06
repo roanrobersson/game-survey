@@ -5,24 +5,18 @@
     background-color: var(--color-darkslategray);
   }
   
-  .logo-text {
+  .logo__text {
     font-weight: bold;
     font-size: 24px;
     margin-left: 15px;
   }
   
-  .logo-text-1 {
+  .logo__text-1 {
     color: var(--color-coral);
   }
   
-  .logo-text-2 {
+  .logo__text-2 {
     color: #FFF;
-  }
-  
-  @media (max-width: 850px) {
-    .main-header {
-      justify-content: center;
-    }
   }
   
   
