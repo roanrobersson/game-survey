@@ -7,12 +7,14 @@ https://game-survey-roan.netlify.app
 
 Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
+A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app web ou mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
 
 ## Layout mobile
 ![Mobile 1](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/mobile1.png) ![Mobile 2](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/mobile2.png)
 
 ## Layout web
+![Web 0](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/web0.png)
+
 ![Web 1](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/web1.png)
 
 ![Web 2](https://raw.githubusercontent.com/roanrobersson/assets/master/game-survey/web2.png)
@@ -31,6 +33,9 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 - [ReactJS](https://reactjs.com "Site do ReactJS")
 - [React Native](https://reactnative.dev "Site do React Native")
 - [Apex Charts](https://apexcharts.com "Site do Apex Charts")
+- [React Paginate](https://github.com/AdeleD/react-paginate "Repositório do React Paginate")
+- [React Hook Form](https://react-hook-form.com "Site do React Hook Form")
+- [React Alert](https://github.com/schiehll/react-alert "Repositório do React Alert")
 - [Expo](https://expo.io "Site do Expo")
 ## Implantação em produção
 - Back end: [Heroku](https://www.heroku.com "Site do Heroku")
