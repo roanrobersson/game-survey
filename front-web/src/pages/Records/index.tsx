@@ -5,15 +5,24 @@ import { formatDate } from './helpers';
 import Pagination from './Pagination';
 import Filters from 'core/components/filters';
 import { makeRequest } from 'core/utils/request';
+import { useAlert } from 'react-alert';
 
 const Records = () => {
   const [recordsResponse, setRecordsResponse] = useState<RecordsResponse>();
   const [activePage, setActivePage] = useState(0);
-
+  const alert = useAlert();
+  
   useEffect(() => {
     makeRequest({ url: `/records?linesPerPage=12&page=${activePage}` })
-      .then(response => setRecordsResponse(response.data));
-  }, [activePage]);
+      .then(response => setRecordsResponse(response.data))
+      .catch(error => {
+        if (error.response) {
+          alert.error("Erro ao listar registros")
+        } else {
+          alert.error("Erro de conexão");
+        }
+      });
+  }, [activePage, alert]);
 
   const handlePageChange = (index: number) => {
     setActivePage(index)

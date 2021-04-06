@@ -22,7 +22,7 @@
   .home-actions {
     display: flex;
     height: 70px;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   
   .home-btn {
@@ -83,6 +83,7 @@
     .home-actions {
       margin-top: 50px;
     }
+
   }
   
   @media (max-width: 850px) {

@@ -1,0 +1,29 @@
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 50px 20px 30px 20px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.platform-card:nth-child(-n+2) {
+  margin-right: 20px;
+}
+
+.platform-card__icon {
+  height: 80px;
+  color: #9E9E9E;
+}
+
+.platform-card__text {
+  color: #9E9E9E;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: bold;
+  text-align: center;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPaginate from 'react-paginate';
 import './styles.css';
 
 type Props = {
@@ -8,19 +9,32 @@ type Props = {
 }
 
 const Pagination = ({ totalPages = 0, goToPage, activePage }: Props) => {
-  const paginationItems = Array.from(Array(totalPages).keys());
+  //const paginationItems = Array.from(Array(totalPages).keys());
+  const handlePageClick = (data: any) => {
+    goToPage(data.selected);
+  }
+
   return (
-    <div className="pagination-container">
-      {paginationItems.map(item => (
-        <button 
-          key={item}
-          className={`pagination-item ${activePage === item ? 'active' : 'inactive'}`}
-          onClick={() => goToPage(item)}
-        >
-          {item + 1}
-        </button>
-      ))}
-    </div>
+    <ReactPaginate
+      previousLabel={'<'}
+      nextLabel={'>'}
+      breakLabel={'...'}
+      breakClassName={'pagination-item'}
+      breakLinkClassName={'pagination-link'}
+      pageCount={totalPages}
+      marginPagesDisplayed={1}
+      pageRangeDisplayed={5}
+      onPageChange={handlePageClick}
+      containerClassName={'pagination-container'}
+      pageClassName={'pagination-item'}
+      pageLinkClassName={'pagination-link'}
+      activeClassName={'active'}
+      previousClassName={'pagination-item'}
+      previousLinkClassName={'pagination-link'}
+      nextClassName={'pagination-item'}
+      nextLinkClassName={'pagination-link'}
+      disabledClassName={'disabled'}
+    />
   );
 }
 

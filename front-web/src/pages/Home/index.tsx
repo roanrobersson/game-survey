@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as ArrowIcon } from 'core/assets/arrow.svg';
-import { ReactComponent as GamerImage } from 'core/assets/gamer.svg';
+import { ReactComponent as ArrowIcon } from 'assets/arrow.svg';
+import { ReactComponent as GamerImage } from 'assets/gamer.svg';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
@@ -17,6 +17,16 @@ const Home = () => (
         <div className="home-actions">
           <button className="home-btn">
             QUERO SABER QUAIS SÃO
+          </button>
+          <div className="home-btn-icon">
+            <ArrowIcon />
+          </div>
+        </div>
+      </Link>
+      <Link to="/survey">
+        <div className="home-actions">
+          <button className="home-btn">
+            QUERO VOTAR
           </button>
           <div className="home-btn-icon">
             <ArrowIcon />

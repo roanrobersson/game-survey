@@ -1,0 +1,111 @@
+::placeholder {
+  color: #9E9E9E;
+}
+
+.survey-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.survey__content {
+  display: flex;
+
+}
+
+.survey__submit-button {
+  height: 60px;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 100px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #0B1F34;
+  background-color: #00D4FF;
+}
+
+.survey__submit-button:hover {
+  background-color: #04c7ef;
+}
+
+.survey__submit-button.disabled {
+  opacity: 0.2;
+}
+
+.survey__submit-button.disabled:hover {
+  background-color: #00D4FF;
+}
+
+
+/* 
+* User section 
+*/
+.survey__user-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+
+.survey__input {
+  height: 50px;
+  width: 400px;
+  padding-left: 20px;
+  margin-top: 10px;
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #ED7947;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16px;
+  outline: 0px;
+}
+
+.survey__input:focus {
+  border: 3px solid #00d4ff;
+}
+
+.invalid-feedback {
+  margin-top: 5px;
+  color: #ed4747;
+}
+
+.invalid {
+  border: 3px solid #ed4747 !important;
+}
+
+/* 
+* Game section 
+*/
+.survey__game-section{
+
+}
+
+.survey__platforms
+ {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.survey__game-picker {
+  height: 50px;
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #ED7947;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: bold;
+  appearance: none;
+}

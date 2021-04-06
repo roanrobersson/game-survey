@@ -5,6 +5,7 @@ import { barOptions, pieOptions } from './chart-options';
 import Chart from 'react-apexcharts';
 import { buildBarSeries, getPlatformChartData, getGenderChartData } from './helpers';
 import { makeRequest } from 'core/utils/request';
+import { useAlert } from 'react-alert';
 
 type PieChartData = {
   labels: string[];
@@ -26,23 +27,36 @@ const Charts = () => {
   const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
   const [platformData, setPlatformData] = useState<PieChartData>(initialPieData);
   const [genderData, setGenderData] = useState<PieChartData>(initialPieData);
+  const alert = useAlert();
 
   useEffect(() => {
+    let recordsResponse: any;
+    let gamesResponse: any;
+
     async function getData() {
-      const recordsResponse = await makeRequest({ url: '/records' });
-      const gamesResponse = await makeRequest({ url: '/games' });
-   
-      const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content);
-      setBarChartData(barData);
+      try {
+        recordsResponse = await makeRequest({ url: '/records' });
+        gamesResponse = await makeRequest({ url: '/games' });
 
-      const platformChartData = getPlatformChartData(recordsResponse.data.content);
-      setPlatformData(platformChartData);
+        const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content);
+        setBarChartData(barData);
+  
+        const platformChartData = getPlatformChartData(recordsResponse.data.content);
+        setPlatformData(platformChartData);
+  
+        const genreChartData = getGenderChartData(recordsResponse.data.content);
+        setGenderData(genreChartData);
 
-      const genreChartData = getGenderChartData(recordsResponse.data.content);
-      setGenderData(genreChartData);
+      } catch (error) {
+        if (error.response) {
+          alert.error("Erro ao carregar dados")
+        } else {
+          alert.error("Erro de conexão");
+        }
+      };
     }
     getData();
-  }, []);
+  }, [alert]);
 
   return (
     <div className="page-container">
@@ -56,7 +70,6 @@ const Charts = () => {
             <Chart
               options={barOptions}
               type="bar"
-              width="900"
               height="650"
               series={[{ data: barChartData }]}
             />
