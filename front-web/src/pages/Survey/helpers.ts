@@ -14,7 +14,7 @@ export const ageValidations = {
   required: 'Campo obrigatório',
   pattern: {
     value: /^[0-9]+$/,
-    message: 'Digiter apenas números'
+    message: 'Digite apenas números'
   }
 }
 
